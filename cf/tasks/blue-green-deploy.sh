@@ -1,5 +1,5 @@
 #!/bin/bash
-
+echo something!!!!!
 set -e
 
 version=`cat version/number`
