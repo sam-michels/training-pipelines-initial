@@ -10,7 +10,9 @@ green_app_route="${green_app_route//./_}"
 
 cf login -a $CF_API -u $CF_USERNAME -p $CF_PASSWORD -o $CF_ORGANIZATION -s $CF_SPACE
 
-cf push $app_name -f app/${CF_MANIFEST} -p artifact/*.* -n $green_app_route
+cf push $app_name -f app/${CF_MANIFEST} -p artifact/*.* -n $green_app_route --no-start
+
+cf start $app_name
 
 cf map-route $app_name $CF_DOMAIN --hostname $CF_HOSTNAME
 
