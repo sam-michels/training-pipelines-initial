@@ -6,7 +6,7 @@ version=`cat version/number`
 
 cd app
 
-ls /R
+ls -R
 
 gradle assemble
 
