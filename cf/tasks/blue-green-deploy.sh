@@ -49,3 +49,4 @@ for name in $app_names; do
       cf delete $name -f -r
     fi
 done
+cf rename "$app_name" "$CF_APP_NAME"
